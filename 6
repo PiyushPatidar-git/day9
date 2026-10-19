@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+void fun(){
+    char ch;
+    cout<<"enter any alphabet in small letters";
+    cin>>ch;
+    int no;
+    no = ch;
+
+    if(no<97){
+        cout<<"invalid input";
+        
+    }
+    else{
+        int ans;
+        ans = no -32;
+        char final;
+        final = ans;
+        cout<<final;
+    }
+}
+int main(){
+    fun();
+}
