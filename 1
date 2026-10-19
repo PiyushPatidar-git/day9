@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+int zero(int n){
+    int rem;
+    int count= 0;
+    int ans =1;
+    for(int i=1; i<=n; i++){
+        
+        ans = ans*i;
+    }
+    while( ans%10 == 0){
+        
+        ans=ans/10;
+        
+            count++;
+        
+    }
+    return count;
+
+    
+    
+} 
+int main(){
+    int n;
+    cout<<"enter the no.";
+    cin>>n;
+    cout<<zero(n);
+}
