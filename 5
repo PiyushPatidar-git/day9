@@ -1,0 +1,36 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int arm( int n){
+    int dup = n;
+    int count = 0;
+    int rem;
+    int ans = 0;
+    while(dup){
+        count++;
+        dup = dup/10;
+    }
+     dup = n;
+
+    while(dup){
+        rem = dup%10;
+        pow(rem,count);
+        ans = ans+pow(rem,count);
+        dup = dup/10;
+    }
+    if(n == ans){
+        cout<<n<<"armstrong no.";
+    }else{
+        cout<<n<<"is not armstrong no.";
+    }
+    return ans;
+}
+
+int main(){
+    int n;
+    cout<<"enter the no:";
+    cin>>n;
+    arm(n);
+    return 0;
+}
